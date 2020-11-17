@@ -9,8 +9,13 @@
   <% posts.forEach(function(post){ %>
     <h1><%= post.title %></h1>
     
-    <p><%= post.context %></p>
+    <p>
+        <%= post.context.substring(0,100) + "..." %>
+        <a href="posts/<%= post.title %>">Read more</a>
 
+    
+    </p>
+    
     <% }) %>
 
 
